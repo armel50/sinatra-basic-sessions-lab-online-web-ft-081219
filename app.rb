@@ -9,12 +9,12 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do 
-    
+      p params
    configure do
     enable :sessions
     set :session_secret, "secret"
   end
-   p params
+ 
     session[:item] = params[:item]
     @session = session
     
