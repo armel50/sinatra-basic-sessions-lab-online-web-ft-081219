@@ -14,7 +14,7 @@ class App < Sinatra::Base
     enable :sessions
     set :session_secret, "secret"
   end
-   
+   p params
     session[:item] = params[:item]
     @session = session
     
